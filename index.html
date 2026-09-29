@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noimageindex">
+  <meta name="referrer" content="no-referrer">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; img-src 'self'; style-src 'unsafe-inline'; base-uri 'none'; form-action 'none'; frame-ancestors 'none'; connect-src 'none'; media-src 'none'; object-src 'none'; script-src 'none'; font-src 'none'; manifest-src 'none'; worker-src 'none'">
+  <title>Synthetic admin copy preview</title>
+  <style>
+    :root { color-scheme: light; --ink:#231d39; --muted:#625d71; --accent:#4d387b; --line:#ddd8e7; --paper:#fffdf9; --wash:#f5f2f9; }
+    * { box-sizing: border-box; }
+    html { background: #eeeaf3; }
+    body { margin: 0; color: var(--ink); background: linear-gradient(180deg,#eeeaf3 0,#faf8fc 22rem); font: 16px/1.55 system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; }
+    main { width: min(100% - 28px, 1080px); margin: 0 auto; padding: 38px 0 64px; }
+    .eyebrow { margin: 0 0 10px; color: var(--accent); font-size: .76rem; font-weight: 750; letter-spacing: .13em; text-transform: uppercase; }
+    h1 { max-width: 780px; margin: 0; font: 650 clamp(2rem,5vw,3.9rem)/1.02 Georgia,serif; letter-spacing: -.035em; }
+    .lede { max-width: 720px; margin: 18px 0 26px; color: var(--muted); font-size: clamp(1rem,2.4vw,1.2rem); }
+    .notice { display: flex; gap: 12px; align-items: flex-start; margin: 0 0 24px; padding: 14px 16px; border: 1px solid #d7cdea; border-radius: 14px; background: #f7f2ff; color: #43365c; }
+    .dot { width: 10px; height: 10px; flex: 0 0 auto; margin-top: .45em; border-radius: 50%; background: #7655ad; box-shadow: 0 0 0 4px #e8ddf8; }
+    .card { overflow: hidden; border: 1px solid var(--line); border-radius: 18px; background: var(--paper); box-shadow: 0 20px 50px rgba(51,38,76,.09); }
+    .frame { padding: 12px; background: #e8e3ec; }
+    img { display: block; width: 100%; height: auto; border-radius: 10px; background: #fff; }
+    .caption { padding: 18px 20px 20px; }
+    .caption strong { display: block; margin-bottom: 4px; }
+    .caption p { margin: 0; color: var(--muted); }
+    .flow { display: grid; grid-template-columns: repeat(3,1fr); gap: 12px; margin-top: 24px; }
+    .step { padding: 18px; border: 1px solid var(--line); border-radius: 15px; background: rgba(255,253,249,.9); }
+    .num { display: inline-grid; width: 28px; height: 28px; place-items: center; margin-bottom: 9px; border-radius: 50%; background: var(--accent); color: white; font-size: .82rem; font-weight: 750; }
+    .step h2 { margin: 0 0 5px; font-size: 1rem; }
+    .step p { margin: 0; color: var(--muted); font-size: .94rem; }
+    footer { margin-top: 22px; color: #777181; font-size: .78rem; text-align: center; }
+    @media (max-width: 650px) {
+      main { width: min(100% - 20px, 1080px); padding-top: 24px; }
+      .flow { grid-template-columns: 1fr; }
+      .frame { padding: 6px; overflow-x: auto; }
+      img { min-width: 720px; }
+      .frame::after { content: "Swipe sideways to inspect the full desktop mockup"; position: sticky; left: 0; display: block; width: max-content; max-width: calc(100vw - 44px); margin: 8px 6px 2px; padding: 5px 9px; border-radius: 999px; background: rgba(35,29,57,.88); color: white; font-size: .72rem; }
+    }
+    @media (prefers-reduced-motion: reduce) { * { scroll-behavior: auto !important; } }
+  </style>
+</head>
+<body>
+  <main>
+    <p class="eyebrow">Temporary design review</p>
+    <h1>Admin invitation-link copy</h1>
+    <p class="lede">A static, synthetic preview of the proposed admin action. This page demonstrates placement and wording only; it is not connected to an account, database, or clipboard.</p>
+    <div class="notice"><span class="dot" aria-hidden="true"></span><div><strong>Synthetic-only review artifact.</strong> Every visible row is mock content. No live invitation link, code, household record, or interactive control is present.</div></div>
+
+    <section class="card" aria-labelledby="preview-title">
+      <div class="frame"><img src="panel.png" alt="Synthetic desktop mockup of a household administration table, including an invitation link copy action in Korean"></div>
+      <div class="caption">
+        <strong id="preview-title">Proposed admin table treatment</strong>
+        <p>The copy action is enabled only for a released invitation and otherwise shows a short explanation beneath the disabled action.</p>
+      </div>
+    </section>
+
+    <section class="flow" aria-label="Intended flow">
+      <article class="step"><span class="num">1</span><h2>Release</h2><p>An authorised admin releases an invitation before a link can be available.</p></article>
+      <article class="step"><span class="num">2</span><h2>Copy</h2><p>The action copies the already-assigned invitation link in the real authenticated product.</p></article>
+      <article class="step"><span class="num">3</span><h2>Share carefully</h2><p>The admin sends it through the intended private channel. This preview performs no sharing.</p></article>
+    </section>
+    <footer>Static review page · no scripts · no analytics · no external requests</footer>
+  </main>
+</body>
+</html>
